@@ -32,9 +32,20 @@ while not is_game_over():
   print('Player {}'.format(turn+1))
   
   # Get the user input
-  row_choice = int(input('Which row would you like to choose? '))
-  col_choice = int(input('Which row would you like to choose? '))
-  
+  v = 0
+  while v == 0:
+   row_choice = int(input('Which row would you like to choose? '))
+   if(row_choice < 0 or row_choice > 2):
+     print("Invalid choice try again")
+   else:
+     v = 1
+  v = 0
+  while v == 0:
+   col_choice = int(input('Which col would you like to choose? '))
+   if(col_choice < 0 or col_choice > 2):
+     print("Invalid choice try again")
+   else:
+     v = 1
   # Put their move on the board
   make_move(row_choice, col_choice, symbols[turn])
   
