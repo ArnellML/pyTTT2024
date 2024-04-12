@@ -23,7 +23,12 @@ def print_board():
 
 # Inserts a move at a given row & column
 def make_move(row, col, symbol):
-  board[row][col] = symbol
+  if(board[row][col] != ('_')):
+    print("Spot taken. Pick another one.")
+    change_turn()
+
+  else:
+    board[row][col] = symbol
 
 # Returns true when the game is over 
 # Note: Just a stub. Doesn't work yet
