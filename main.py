@@ -5,6 +5,15 @@ board = [['_','_','_'],
 symbols = ['X', 'O']
 turn = 0
 
+def welcome_screen():
+  print('Welcome to')
+  print(''' ______    ______      ______ 
+(  /o     (  /        (  /    
+  /,  _,    /__,  _,    /__ _ 
+_/ (_(__  _/(_/(_(__  _/(_)(/_
+                              
+                              ''')
+
 # Prints the board
 def print_board():
   for row in board:
@@ -26,6 +35,7 @@ def change_turn():
   global turn
   turn = (turn + 1) % 2
 
+welcome_screen()
 while not is_game_over():
   # Print the board and whose turn it is
   print_board()
