@@ -43,7 +43,7 @@ while not is_game_over():
   
   # Get the user input
   row_choice = int(input('Which row would you like to choose? '))
-  col_choice = int(input('Which row would you like to choose? '))
+  col_choice = int(input('Which col would you like to choose? '))
   
   # Put their move on the board
   make_move(row_choice, col_choice, symbols[turn])
